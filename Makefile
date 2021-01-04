@@ -43,7 +43,7 @@ CONFIGURE_ARGS += \
 	--with-lzo-include="$(STAGING_DIR)/usr/include/lzo" \
 	--with-zlib="$(STAGING_DIR)/usr"
 
-MAKE_PATH:=src
+#MAKE_PATH:=src
 
 define Build/Compile
 	$(call Build/Compile/Default)
