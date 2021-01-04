@@ -12,9 +12,10 @@ PKG_VERSION:=1.1pre17
 PKG_RELEASE:=1
 
 PKG_BUILD_DIR:=$(BUILD_DIR)/tinc-$(PKG_VERSION)
-PKG_SOURCE:=release-$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL:=https://github.com/gsliepen/tinc/archive
-PKG_HASH:=skip
+PKG_SOURCE:=tinc-$(PKG_VERSION).tar.gz
+PKG_SOURCE_URL:=https://www.tinc-vpn.org/packages
+PKG_HASH:=fb29dfa2e6d51cd5ab6c9d8c9bc95d48
+
 PKG_BUILD_PARALLEL:=1
 PKG_INSTALL:=1
 
@@ -37,13 +38,13 @@ endef
 TARGET_CFLAGS += -std=gnu99
 
 CONFIGURE_ARGS += \
-	--disable-readline \
 	--disable-curses \
+	--disable-readline \
 	--with-kernel="$(LINUX_DIR)" \
 	--with-lzo-include="$(STAGING_DIR)/usr/include/lzo" \
 	--with-zlib="$(STAGING_DIR)/usr"
 
-#MAKE_PATH:=src
+MAKE_PATH:=src
 
 define Build/Compile
 	$(call Build/Compile/Default)
