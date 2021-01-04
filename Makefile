@@ -14,7 +14,7 @@ PKG_RELEASE:=1
 PKG_BUILD_DIR:=$(BUILD_DIR)/tinc-$(PKG_VERSION)
 PKG_SOURCE:=release-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=https://github.com/gsliepen/tinc/archive
-PKG_HASH:=004d7c0c1f32c414df96e7f44890186cb533a1b7
+PKG_HASH:=skip
 PKG_BUILD_PARALLEL:=1
 PKG_INSTALL:=1
 
